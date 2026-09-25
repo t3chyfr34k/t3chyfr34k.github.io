@@ -39,7 +39,7 @@ export function Hero() {
             </a>
             {hasResume && (
               <a
-                href="/Portfolio/resume.pdf"
+                href="/resume.pdf"
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/8"
               >
                 View Resume

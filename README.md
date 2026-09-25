@@ -96,13 +96,13 @@ Action: Rewrite
 
 ## Deploy to GitHub Pages
 
-The Vite configuration keeps `/Portfolio/` as the default base for GitHub Pages. The existing GitHub Actions workflow builds and deploys `dist/`.
+The repository is the account's GitHub Pages site, so it is served from the domain root. The existing GitHub Actions workflow builds and deploys `dist/`.
 
 1. Push to the `main` branch.
 2. Open the repository **Settings → Pages**.
 3. Set the Pages source to **GitHub Actions**.
 4. Wait for the workflow to complete.
-5. Open `https://t3chyfr34k.github.io/Portfolio/`.
+5. Open `https://t3chyfr34k.github.io/`.
 
 ## Deployment checklist
 

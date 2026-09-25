@@ -55,7 +55,7 @@ export function Navbar() {
         {hasResume && (
           <div className="hidden items-center gap-3 md:flex">
             <a
-              href="/Portfolio/resume.pdf"
+              href="/resume.pdf"
               className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/5 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-emerald-300/60 hover:bg-white/8"
             >
               Resume
@@ -89,7 +89,7 @@ export function Navbar() {
             ))}
             {hasResume && (
               <a
-                href="/Portfolio/resume.pdf"
+                href="/resume.pdf"
                 className="mt-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
