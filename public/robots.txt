@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://t3chyfr34k.github.io/Portfolio/sitemap.xml

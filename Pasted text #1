@@ -1,0 +1,906 @@
+You are the lead frontend engineer and creative UI/UX designer for this project.
+
+We are rebuilding this portfolio website completely from scratch.
+
+IMPORTANT:
+- Do not preserve the old portfolio design or components.
+- Treat the existing application as disposable.
+- Build a polished, production-quality portfolio from the current repository.
+- Do not invent fake work experience, certifications, companies, statistics, projects, or achievements.
+- If information is not available in the repository, use clearly marked placeholders that I can edit later.
+- Keep the architecture clean and maintainable.
+- Do not create unnecessary backend infrastructure. This is a static portfolio intended to be deployed on GitHub Pages.
+
+==================================================
+PROJECT IDENTITY
+==================================================
+
+This portfolio represents a technology professional targeting:
+
+1. SOC Analyst / Cybersecurity
+2. Data Analytics
+3. IT Support Engineer
+4. SAP / ERP
+
+These should NOT feel like four unrelated careers.
+
+The website should communicate one unified identity:
+
+TECHNOLOGY • SECURITY • DATA • ENTERPRISE SYSTEMS
+
+The narrative should be:
+
+I understand technology from multiple layers:
+- supporting and troubleshooting systems
+- analyzing data
+- investigating security events
+- understanding enterprise/SAP workflows
+
+The portfolio should demonstrate practical technical capability rather than simply listing buzzwords.
+
+==================================================
+TECH STACK
+==================================================
+
+Use:
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React icons
+- CSS animations where appropriate
+- Framer Motion if needed for sophisticated scroll/reveal animations
+
+Keep dependencies reasonable.
+
+Do NOT introduce a large UI framework.
+
+The application must work perfectly with:
+
+npm install
+npm run dev
+npm run build
+
+It must be compatible with GitHub Pages.
+
+==================================================
+VISUAL DIRECTION
+==================================================
+
+Create a premium dark-mode technology portfolio.
+
+The visual language should be:
+
+- glassmorphism
+- cinematic
+- futuristic but professional
+- minimal
+- high-end
+- technical
+- atmospheric
+- sophisticated
+- recruiter-friendly
+
+Avoid the generic developer portfolio aesthetic.
+
+DO NOT make it look like:
+- a gaming website
+- a hacker movie interface
+- a cyberpunk template
+- a cryptocurrency website
+- a neon-heavy gaming dashboard
+- an over-animated template
+
+The site should feel like a premium personal technology lab.
+
+==================================================
+COLOR SYSTEM
+==================================================
+
+Primary background:
+- near-black
+- charcoal
+- deep graphite
+
+Use subtle cool-toned highlights.
+
+Use glass surfaces with:
+- translucent backgrounds
+- backdrop blur
+- subtle borders
+- soft shadows
+- controlled highlights
+
+Use accent colors sparingly.
+
+The overall UI should remain readable and professional.
+
+Avoid excessive gradients.
+
+==================================================
+GLASSMORPHISM
+==================================================
+
+Use glass panels throughout the interface.
+
+Example characteristics:
+
+background:
+rgba(255,255,255,0.03 - 0.07)
+
+border:
+rgba(255,255,255,0.08 - 0.15)
+
+backdrop-filter:
+blur()
+
+Use:
+- glass navigation
+- glass project cards
+- glass skill cards
+- glass timeline elements
+- glass buttons
+- floating information panels
+
+Glass should create hierarchy, not make the entire page look blurry.
+
+==================================================
+CINEMATIC BACKLIGHT
+==================================================
+
+This is extremely important.
+
+Create a strong but elegant atmospheric backlight behind the hero profile image.
+
+The profile image should appear illuminated from behind.
+
+Use layered radial gradients / pseudo-elements / blurred light sources.
+
+The lighting should feel like:
+
+subject
+   ↓
+soft halo
+   ↓
+large diffused backlight
+   ↓
+dark background
+
+The backlight should subtly react to the page/scroll if practical.
+
+Do NOT put a bright rectangle behind the image.
+
+It should look like cinematic studio lighting.
+
+The light should softly spill around the silhouette.
+
+==================================================
+PROFILE IMAGE
+==================================================
+
+Use the supplied profile image:
+
+Portfolio/Profile.png
+
+This is MY profile image.
+
+IMPORTANT:
+- Do NOT alter my face.
+- Do NOT generate or replace the person.
+- Do NOT apply AI face effects.
+- Do NOT distort the image.
+- Preserve the original appearance.
+- Preserve the transparent background if the file contains transparency.
+
+The image should be prominently used in the hero section.
+
+Use object-fit appropriately.
+
+The composition should allow the subject to extend naturally beyond the glass container if needed.
+
+Do not force the entire image into a small circular avatar.
+
+This should be a large editorial hero portrait.
+
+==================================================
+HERO SECTION
+==================================================
+
+The first viewport should immediately establish identity.
+
+Suggested structure:
+
+Small eyebrow:
+
+"IT • SECURITY • DATA • ERP"
+
+Large headline:
+
+"Building, troubleshooting, analyzing and securing technology systems."
+
+Then a short professional description.
+
+Do not use generic phrases like:
+
+"passionate developer"
+"coding enthusiast"
+"tech geek"
+"future-ready professional"
+
+Keep the copy concise and credible.
+
+Show the profile image prominently on the right side on desktop.
+
+Hero composition:
+
+LEFT:
+- identity
+- headline
+- short description
+- CTA buttons
+
+RIGHT:
+- profile portrait
+- cinematic backlight
+- subtle floating glass elements
+
+Possible CTA:
+
+"Explore My Work"
+
+"View Resume"
+
+Use anchor navigation.
+
+==================================================
+SCROLL STORYTELLING
+==================================================
+
+This is one of the most important design requirements.
+
+The website should feel like a story as the user scrolls.
+
+Do NOT simply stack static sections one after another.
+
+Use scroll-based transitions and reveal animations.
+
+The narrative should roughly be:
+
+01 — INTRODUCTION
+Who I am
+
+↓
+
+02 — CAPABILITIES
+What I work with
+
+↓
+
+03 — CYBERSECURITY
+How I investigate and secure systems
+
+↓
+
+04 — DATA
+How I transform raw information into insight
+
+↓
+
+05 — IT OPERATIONS
+How I troubleshoot and support systems
+
+↓
+
+06 — SAP / ENTERPRISE
+How technology connects with business processes
+
+↓
+
+07 — PROJECTS
+Proof of work
+
+↓
+
+08 — EXPERIENCE / EDUCATION
+Professional background
+
+↓
+
+09 — CONTACT
+Let's connect
+
+Each section should visually transition into the next.
+
+==================================================
+SCROLL ANIMATION STYLE
+==================================================
+
+Use:
+
+- fade-in
+- fade-up
+- subtle horizontal movement
+- scale transitions
+- blur-to-sharp transitions
+- parallax
+- sticky storytelling sections
+- progress indicators
+- viewport-triggered animations
+
+Animations should be subtle and premium.
+
+Do NOT animate every single element aggressively.
+
+Use animation to guide attention.
+
+Respect:
+
+prefers-reduced-motion
+
+for accessibility.
+
+==================================================
+NAVIGATION
+==================================================
+
+Create a floating glass navigation bar.
+
+Desktop:
+
+Logo/name on left.
+
+Navigation on right.
+
+Suggested:
+
+Home
+About
+Skills
+Projects
+Labs
+Experience
+Contact
+
+Add a Resume button.
+
+The navbar should:
+
+- remain visible while scrolling
+- become slightly more opaque after scrolling
+- have backdrop blur
+- have subtle border
+- have smooth transitions
+
+Mobile:
+
+Use a clean glass menu button.
+
+Do not create a huge full-screen menu unless necessary.
+
+==================================================
+ABOUT SECTION
+==================================================
+
+Create a visually interesting About section.
+
+Avoid a giant wall of text.
+
+Use a combination of:
+
+- short narrative
+- technical highlights
+- capability cards
+- small metrics only if real data exists
+
+Possible themes:
+
+Systems
+Security
+Data
+Enterprise
+
+Make it feel like an evolution of the story introduced in the hero.
+
+==================================================
+SKILLS SECTION
+==================================================
+
+Organize skills by domain instead of making one giant list.
+
+Four primary groups:
+
+SOC / CYBERSECURITY
+
+IT SUPPORT / INFRASTRUCTURE
+
+DATA ANALYTICS
+
+SAP / ERP
+
+Potential technologies can be included only if they are actually supported by the existing repository/profile information.
+
+Examples of possible technologies:
+
+Cybersecurity:
+- SIEM
+- log analysis
+- incident response
+- networking
+- threat analysis
+- Windows event logs
+
+Data:
+- SQL
+- Excel
+- Power BI
+- Python
+- data cleaning
+- dashboards
+
+IT:
+- Windows
+- Linux
+- networking
+- troubleshooting
+- Active Directory
+- DNS
+- DHCP
+- ticketing
+
+SAP:
+- SAP fundamentals
+- ERP
+- business processes
+- relevant modules
+
+Do not claim proficiency levels unless real information exists.
+
+==================================================
+SOC / CYBERSECURITY SECTION
+==================================================
+
+Give cybersecurity its own strong visual identity.
+
+Show practical investigation-oriented work.
+
+Possible presentation:
+
+SOC LAB
+
+Alert
+→ Investigation
+→ Evidence
+→ Root Cause
+→ Response
+
+Potential project cards:
+
+- Windows Event Log Investigation
+- Brute Force Detection
+- SIEM Alert Investigation
+- Network Traffic Analysis
+- Phishing Investigation
+- Incident Response
+
+ONLY include projects that actually exist.
+
+If they don't exist yet, create placeholder project data clearly labeled:
+
+"Project placeholder — replace with actual lab"
+
+Do not fabricate results.
+
+==================================================
+DATA ANALYTICS SECTION
+==================================================
+
+Present analytics as an actual workflow:
+
+DATA
+↓
+CLEAN
+↓
+ANALYZE
+↓
+VISUALIZE
+↓
+INSIGHT
+
+Use elegant visual cards.
+
+Potential technologies:
+
+SQL
+Excel
+Power BI
+Python
+
+Again, only claim technologies actually supported by my profile.
+
+==================================================
+IT SUPPORT SECTION
+==================================================
+
+Make this practical.
+
+Show troubleshooting methodology.
+
+Example visual flow:
+
+Issue
+↓
+Diagnose
+↓
+Isolate
+↓
+Resolve
+↓
+Document
+
+Possible scenarios:
+
+- Network connectivity
+- DNS issues
+- DHCP issues
+- Windows troubleshooting
+- Account/access problems
+- Hardware/software issues
+
+Do not fabricate professional experience.
+
+These can be presented as labs or technical scenarios.
+
+==================================================
+SAP SECTION
+==================================================
+
+Create an enterprise-focused section.
+
+It should visually feel slightly more structured/business-oriented.
+
+Focus on:
+
+- ERP concepts
+- business processes
+- SAP fundamentals
+- enterprise workflows
+- relevant SAP knowledge
+
+Do not invent SAP implementation experience.
+
+==================================================
+PROJECTS
+==================================================
+
+Create a premium project showcase.
+
+Projects should support the four career directions.
+
+Each project card should include:
+
+- title
+- category
+- short description
+- technologies
+- GitHub link if available
+- live demo if available
+- visual/image if available
+
+Use category filters:
+
+All
+Cybersecurity
+Data
+IT Support
+SAP
+
+Project cards should have hover interactions.
+
+Avoid excessive 3D effects.
+
+==================================================
+PROJECT DETAIL EXPERIENCE
+==================================================
+
+If practical, create expandable project cards or project detail views.
+
+A project should be able to communicate:
+
+Problem
+Approach
+Tools
+Implementation
+Result
+What I learned
+
+Only use real information.
+
+==================================================
+LABS
+==================================================
+
+Create a dedicated "Labs" section.
+
+This is important for demonstrating hands-on technical learning.
+
+Use lab cards such as:
+
+SOC Lab
+Network Troubleshooting Lab
+Windows Administration Lab
+Data Analytics Lab
+SAP Learning Lab
+
+Only populate real labs when information is available.
+
+==================================================
+EXPERIENCE
+==================================================
+
+Create a clean timeline.
+
+Use:
+
+- organization
+- role
+- dates
+- responsibilities
+- technologies
+
+Do not fabricate experience.
+
+If no information exists, create a clean placeholder structure for me to fill.
+
+==================================================
+EDUCATION & CERTIFICATIONS
+==================================================
+
+Create separate but visually connected blocks.
+
+Education:
+- institution
+- degree
+- year
+
+Certifications:
+- certification name
+- issuer
+- year
+- verification link if available
+
+Never invent credentials.
+
+==================================================
+RESUME
+==================================================
+
+Create a strong Resume CTA.
+
+Use:
+
+"Download Resume"
+
+The implementation should expect:
+
+public/resume.pdf
+
+If the file does not exist, do not break the UI.
+
+Instead show the button only when the file exists OR create a clearly marked placeholder.
+
+==================================================
+CONTACT
+==================================================
+
+Create a clean closing section.
+
+The final section should feel like the conclusion of the story.
+
+Headline example:
+
+"Let's build something useful."
+
+Include:
+
+- Email
+- LinkedIn
+- GitHub
+
+Only use actual links when available.
+
+Do not invent contact information.
+
+==================================================
+FOOTER
+==================================================
+
+Minimal.
+
+Name
+Technical positioning
+GitHub
+LinkedIn
+Copyright
+
+==================================================
+RESPONSIVENESS
+==================================================
+
+The website must be excellent on:
+
+- 1440px+
+- 1280px
+- 1024px
+- 768px
+- 480px
+- 375px
+
+Do not simply shrink desktop.
+
+Design intentional mobile layouts.
+
+The hero portrait should remain visually strong on mobile.
+
+==================================================
+ACCESSIBILITY
+==================================================
+
+Implement:
+
+- semantic HTML
+- keyboard navigation
+- visible focus states
+- accessible buttons
+- aria labels where needed
+- good contrast
+- reduced motion support
+- meaningful alt text
+
+==================================================
+PERFORMANCE
+==================================================
+
+Optimize for GitHub Pages.
+
+Avoid:
+
+- huge JavaScript libraries
+- unnecessary animations
+- giant images without optimization
+- continuous expensive scroll listeners
+
+Use IntersectionObserver or efficient animation mechanisms where possible.
+
+Lazy-load non-critical images.
+
+==================================================
+CODE QUALITY
+==================================================
+
+Use reusable components.
+
+Suggested structure:
+
+src/
+├── components/
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Skills.tsx
+│   ├── Domains.tsx
+│   ├── Projects.tsx
+│   ├── Labs.tsx
+│   ├── Experience.tsx
+│   ├── Education.tsx
+│   ├── Certifications.tsx
+│   ├── Contact.tsx
+│   └── Footer.tsx
+│
+├── data/
+│   ├── projects.ts
+│   ├── skills.ts
+│   ├── experience.ts
+│   └── certifications.ts
+│
+├── hooks/
+│   └── useScrollProgress.ts
+│
+├── App.tsx
+├── main.tsx
+└── index.css
+
+Keep content separate from UI wherever practical.
+
+==================================================
+GITHUB PAGES
+==================================================
+
+The final application must deploy correctly to:
+
+GitHub Pages
+
+Repository:
+
+t3chyfr34k/Portfolio
+
+Make sure Vite's base path is correctly configured for the repository deployment.
+
+The expected production URL is:
+
+https://t3chyfr34k.github.io/Portfolio/
+
+Configure the project so that assets work correctly under this subpath.
+
+Create/update the GitHub Actions workflow for deployment if required.
+
+==================================================
+IMPORTANT DEVELOPMENT RULE
+==================================================
+
+Do NOT generate everything as one enormous component.
+
+Build the application in logical reusable components.
+
+First establish:
+
+1. project foundation
+2. global styles/design tokens
+3. navbar
+4. hero
+5. scroll behavior
+6. sections
+7. project data
+8. responsive behavior
+9. deployment
+
+After each major stage:
+
+- run npm build
+- fix TypeScript errors
+- fix ESLint errors if configured
+- verify responsive behavior
+- ensure no broken imports
+
+==================================================
+FINAL DESIGN PRINCIPLE
+==================================================
+
+The portfolio should feel like entering a story about a technology professional.
+
+Not:
+
+"Here are my skills."
+
+Instead:
+
+"Here is how I think about technology."
+
+The visual hierarchy should communicate:
+
+SYSTEMS
+→ DATA
+→ SECURITY
+→ OPERATIONS
+→ ENTERPRISE
+
+Make the website memorable without sacrificing professionalism.
+
+The result should look strong enough for:
+
+SOC Analyst applications
+Data Analyst applications
+IT Support Engineer applications
+SAP-related applications
+
+while still feeling like one coherent personal brand.
+
+START NOW.
+
+First inspect the existing repository and package.json.
+
+Then create the new application structure.
+
+Do not ask me to confirm every small decision.
+
+Make sensible engineering and design decisions and proceed.
