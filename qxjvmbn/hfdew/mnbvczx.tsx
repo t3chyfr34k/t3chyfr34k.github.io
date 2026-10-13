@@ -11,10 +11,10 @@ const summaryPills = [
 export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden pb-16 pt-28 sm:pt-32 lg:pt-36">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(98,127,181,0.18),transparent_30%),radial-gradient(circle_at_70%_30%,rgba(125,211,252,0.13),transparent_32%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(255,255,255,0.08),transparent_30%),radial-gradient(circle_at_70%_30%,rgba(148,163,184,0.09),transparent_32%)]" />
 
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
-        <div className="relative z-10">
+        <div className="hero-copy relative z-10">
           <div className="mb-6 inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.28em] text-slate-300">
             {summaryPills[0]}
           </div>
@@ -56,19 +56,26 @@ export function Hero() {
               { icon: BriefcaseBusiness, label: 'ERP' },
             ].map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2">
-                <Icon className="h-3.5 w-3.5 text-emerald-200" />
+                <Icon className="h-3.5 w-3.5 text-slate-200" />
                 {label}
               </div>
             ))}
           </div>
         </div>
 
-        <div className="relative flex justify-center lg:justify-end">
+        <div className="hero-portrait relative flex justify-center lg:justify-end">
           <div className="relative w-full max-w-[560px]">
             <div className="absolute inset-x-6 bottom-4 top-8 rounded-[32%] bg-[radial-gradient(circle,rgba(142,197,255,0.35),rgba(142,197,255,0.08)_28%,transparent_62%)] blur-3xl" />
             <div className="absolute inset-x-10 bottom-[-18px] top-[60px] rounded-[50%] border border-white/10 bg-white/4 backdrop-blur-sm" />
 
-            <div className="relative mx-auto w-full max-w-[440px] rounded-[2.2rem] border border-white/10 bg-white/5 p-3 shadow-[0_30px_120px_rgba(15,23,42,0.8)] backdrop-blur-md">
+            <div className="hero-orb-scene pointer-events-none absolute -right-3 top-0 z-0 h-40 w-40 sm:-right-5 sm:top-3 sm:h-56 sm:w-56" aria-hidden="true">
+              <div className="hero-orb-core" />
+              <div className="hero-orb-ring hero-orb-ring-one" />
+              <div className="hero-orb-ring hero-orb-ring-two" />
+              <div className="hero-orb-ring hero-orb-ring-three" />
+            </div>
+
+            <div className="relative z-10 mx-auto w-full max-w-[440px] rounded-[2.2rem] border border-white/10 bg-white/5 p-3 shadow-[0_30px_120px_rgba(0,0,0,0.48)] backdrop-blur-md">
               <div className="overflow-hidden rounded-[1.9rem] border border-white/10 bg-slate-950/70">
                 <img
                   src={profileImage}

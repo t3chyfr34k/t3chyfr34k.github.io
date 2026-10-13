@@ -59,3 +59,18 @@ img {
   background: rgba(125, 211, 252, 0.25);
   color: white;
 }
+
+/* Minimal motion system: calm, lightweight, and accessible. */
+.hero-copy { animation: hero-enter 700ms cubic-bezier(0.2, 0.75, 0.25, 1) both; }
+.hero-portrait { animation: hero-enter 850ms cubic-bezier(0.2, 0.75, 0.25, 1) 100ms both; }
+.hero-orb-scene { perspective: 900px; transform-style: preserve-3d; opacity: 0.82; animation: orb-drift 8s ease-in-out infinite; }
+.hero-orb-core { position:absolute; inset:28%; border:1px solid rgba(255,255,255,.5); border-radius:50%; background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.92),rgba(203,213,225,.25) 28%,rgba(15,23,42,.04) 65%),linear-gradient(135deg,rgba(255,255,255,.26),rgba(148,163,184,.03)); box-shadow:0 0 45px rgba(226,232,240,.12),inset -12px -12px 24px rgba(0,0,0,.22); transform:translateZ(28px); }
+.hero-orb-ring { position:absolute; inset:13%; border:1px solid rgba(226,232,240,.42); border-radius:50%; transform-style:preserve-3d; box-shadow:0 0 22px rgba(255,255,255,.035); }
+.hero-orb-ring-one { transform:rotateX(68deg) rotateY(-18deg); animation:orb-spin-one 18s linear infinite; }
+.hero-orb-ring-two { inset:7%; border-color:rgba(148,163,184,.36); transform:rotateY(66deg) rotateX(18deg); animation:orb-spin-two 24s linear infinite; }
+.hero-orb-ring-three { inset:20%; border-color:rgba(255,255,255,.24); transform:rotateX(28deg) rotateZ(52deg); animation:orb-spin-one 30s linear infinite reverse; }
+@keyframes hero-enter { from { opacity:0; transform:translate3d(0,16px,0); } to { opacity:1; transform:translate3d(0,0,0); } }
+@keyframes orb-drift { 0%,100% { transform:translate3d(0,0,0) rotateX(-4deg); } 50% { transform:translate3d(0,-9px,0) rotateX(4deg); } }
+@keyframes orb-spin-one { from { rotate:0deg; } to { rotate:360deg; } }
+@keyframes orb-spin-two { from { rotate:y 0deg; } to { rotate:y 360deg; } }
+@media (prefers-reduced-motion: reduce) { .hero-copy,.hero-portrait,.hero-orb-scene,.hero-orb-ring { animation:none !important; } }
