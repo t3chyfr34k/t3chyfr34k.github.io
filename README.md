@@ -27,6 +27,8 @@ npm run dev
 For a production-like local check:
 
 ```bash
+npm run lint
+npm test
 npm run build
 npm run preview
 ```
@@ -37,6 +39,7 @@ npm run preview
 | --- | --- |
 | `npm run dev` | Start the Vite development server |
 | `npm run build` | Type-check and create the production bundle in `dist/` |
+| `npm test` | Run Node.js regression tests for routing, troubleshooting search, assets, and CI configuration |
 | `npm run preview` | Serve the production bundle locally |
 | `npm run lint` | Run Oxlint |
 
@@ -46,8 +49,10 @@ Portfolio content is kept separate from the UI. Update these files when adding r
 
 - `qxjvmbn/xgewyguffwhc/plkjs.ts` — skills and tools
 - `qxjvmbn/xgewyguffwhc/hfqwe.ts` — certifications
-- `qxjvmbn/xgewyguffwhc/mnbqwe.ts` — planned projects
+- `qxjvmbn/xgewyguffwhc/qwepjl.ts` — project cards, troubleshooting articles, dashboard sample data, and workflow stages
+- `qxjvmbn/xgewyguffwhc/mnbqwe.ts` — planned-project metadata
 - `qxjvmbn/xgewyguffwhc/xgzxc.ts` — experience status
+- `qxjvmbn/xgewyguffwhc/portfolioUtils.mjs` — tested project lookup and troubleshooting search helpers
 
 Project ideas are intentionally labeled as planned until they are actually built. Do not add invented experience, results, credentials, or links.
 
@@ -74,7 +79,7 @@ Build command: npm ci && npm run build
 Publish directory: dist
 ```
 
-The `VITE_DEPLOY_TARGET=render` variable makes Vite use `/` as the asset base on Render. The rewrite sends requests to `index.html`, which keeps the static app resilient if client-side paths are added later.
+Both Render and this account-level GitHub Pages site are served from the domain root, so Vite uses `/` as the asset base. The rewrite sends requests to `index.html`, which keeps the static app resilient if client-side paths are added later.
 
 ### Manual Render deployment
 
@@ -84,7 +89,7 @@ Create a **Static Site** in the Render dashboard with:
 - **Branch:** your deployment branch, usually `main`
 - **Build command:** `npm ci && npm run build`
 - **Publish directory:** `dist`
-- **Environment variable:** `VITE_DEPLOY_TARGET=render`
+- **Environment variable:** none required for the root-path asset configuration
 
 Add this rewrite rule if the dashboard asks for one:
 
