@@ -47,7 +47,8 @@ test('CI includes lint, tests and build and avoids PR deployment', () => {
   assert.match(workflow, /run: npm run lint/)
   assert.match(workflow, /run: npm test/)
   assert.match(workflow, /run: npm run build/)
-  assert.match(workflow, /if: github\.event_name != 'pull_request'/)
+  assert.match(workflow, /if: github\.ref == 'refs\/heads\/main' && github\.event_name != 'pull_request'/)
+  assert.match(workflow, /group: \$\{\{ github\.workflow \}\}-\$\{\{ github\.ref \}\}/)
 })
 
 test('package exposes test script', () => {
