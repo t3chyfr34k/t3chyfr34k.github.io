@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight, ExternalLink, Search, ShieldCheck } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { operationsRows, portfolioProjects, troubleshootingArticles, workflowStages, type PortfolioProject, type TroubleshootingArticle, type WorkflowStage } from '../xgewyguffwhc/qwepjl'
+import { findProjectBySlug, searchTroubleshootingArticles } from '../xgewyguffwhc/portfolioUtils.mjs'
 import { OperationsDashboard } from './qjdata'
 import { ERPWorkflowDetailed } from './qjsap2'
 import { ProjectEvidence } from './qjevidence'
@@ -42,7 +43,7 @@ function ITSupportPage() {
   const matches = useMemo(() => {
     const normalized = query.trim().toLowerCase()
     if (!normalized) return troubleshootingArticles
-    return troubleshootingArticles.filter((article) => [article.title, article.errorMessage, article.category, ...article.keywords, ...article.symptoms, ...article.checks, ...article.solutions].join(' ').toLowerCase().includes(normalized))
+    return searchTroubleshootingArticles(troubleshootingArticles, normalized)
   }, [query])
 
   return (
@@ -86,6 +87,7 @@ export function SAPPageLegacy() {
 }
 
 export function ProjectDetail({ slug }: ProjectDetailProps) {
-  const project = portfolioProjects.find((item) => item.slug === slug) ?? portfolioProjects[0]
+  const project = findProjectBySlug(portfolioProjects, slug)
+  if (!project) return <main className="min-h-[70vh] px-4 pb-24 pt-32 sm:px-6 lg:px-8"><div className="mx-auto max-w-3xl rounded-3xl border border-white/10 bg-white/[0.03] p-8 sm:p-12"><p className="text-xs uppercase tracking-[0.24em] text-slate-400">404 · Project not found</p><h1 className="mt-4 text-3xl font-medium tracking-tight text-white sm:text-5xl">This project does not exist.</h1><p className="mt-4 max-w-xl text-sm leading-6 text-slate-300">The link may be outdated or the project may have moved.</p><a href="#projects" className="mt-7 inline-flex rounded-full bg-white px-5 py-3 text-sm font-medium text-slate-950 transition hover:bg-slate-200">Back to projects</a></div></main>
   return <main className="min-h-screen px-4 pb-24 pt-28 sm:px-6 lg:px-8"><div className="mx-auto max-w-6xl"><Header project={project} />{slug === 'it-support' && <ITSupportPage />}{slug === 'data' && <OperationsDashboard />}{slug === 'sap' && <ERPWorkflowDetailed />}<ProjectEvidence project={project.slug as 'it-support' | 'data' | 'sap'} /></div></main>
 }
