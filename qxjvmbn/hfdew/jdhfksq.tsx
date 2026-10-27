@@ -20,7 +20,7 @@ export function Projects({ onOpenProject }: ProjectsProps) {
               <Compass className="h-5 w-5" />
             </div>
             <div>
-              <h2 className="text-2xl font-medium text-white">Three focused projects built around my target roles.</h2>
+              <h2 className="text-2xl font-medium text-white">{portfolioProjects.length} focused projects built around practical technology work.</h2>
               <p className="mt-3 text-sm leading-6 text-slate-300">
                 Each project is a focused portfolio implementation with clear boundaries, practical workflows, and honest scope.
               </p>

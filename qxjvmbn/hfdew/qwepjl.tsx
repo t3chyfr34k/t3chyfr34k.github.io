@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, ExternalLink, Search, ShieldCheck } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ExternalLink, Github, Linkedin, Search, ShieldCheck } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { operationsRows, portfolioProjects, troubleshootingArticles, workflowStages, type PortfolioProject, type TroubleshootingArticle, type WorkflowStage } from '../xgewyguffwhc/qwepjl'
 import { OperationsDashboard } from './qjdata'
@@ -25,7 +25,7 @@ function Header({ project }: { project: PortfolioProject }) {
         <ArrowLeft className="h-4 w-4" />
         Back to {project.category}
       </button>
-      <div className="mt-6 text-xs uppercase tracking-[0.24em] text-slate-500">OpsLab / {project.category} / {project.title}</div>
+      <div className="mt-6 text-xs uppercase tracking-[0.24em] text-slate-500">Portfolio / {project.category} / {project.title}</div>
       <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-300/30 bg-emerald-400/10 px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-emerald-100">
         <ShieldCheck className="h-3.5 w-3.5" />
         Demo / Portfolio Project
@@ -85,7 +85,81 @@ export function SAPPageLegacy() {
   return <div className="space-y-8"><div className="rounded-[1.8rem] border border-amber-200/30 bg-amber-300/5 p-5 text-sm leading-6 text-amber-50"><strong>Theoretical / Portfolio Implementation.</strong> This project demonstrates understanding of enterprise workflow, system integration, and infrastructure architecture. It is not an actual SAP production deployment.</div><div className="rounded-[1.8rem] border border-white/10 bg-white/3 p-6 backdrop-blur-xl"><h2 className="text-xl font-medium text-white">Order-to-Cash workflow</h2><div className="mt-6 flex flex-wrap items-center gap-2">{workflowStages.map((stage, index) => <span key={stage.name} className="flex items-center gap-2"><button type="button" onClick={() => setSelectedStage(stage)} className={['rounded-full border px-3 py-2 text-sm transition', selectedStage.name === stage.name ? 'border-sky-300/60 bg-sky-400/10 text-white' : 'border-white/10 bg-slate-950/50 text-slate-300 hover:border-white/20'].join(' ')}>{stage.name}</button>{index < workflowStages.length - 1 && <ArrowRight className="h-4 w-4 text-slate-600" />}</span>)}</div></div><div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]"><div className="rounded-[1.8rem] border border-white/10 bg-white/3 p-6"><p className="text-xs uppercase tracking-[0.2em] text-slate-500">Selected stage</p><h2 className="mt-3 text-2xl font-medium text-white">{selectedStage.name}</h2><p className="mt-4 text-sm leading-6 text-slate-300">{selectedStage.purpose}</p></div><div className="rounded-[1.8rem] border border-white/10 bg-white/3 p-6"><div className="grid gap-5 sm:grid-cols-2">{[['Purpose', selectedStage.purpose], ['Input', selectedStage.input], ['Output', selectedStage.output], ['Responsible Function', selectedStage.responsible], ['System / Data', selectedStage.systemData], ['Next Step', selectedStage.next]].map(([label, value]) => <div key={label as string}><p className="text-xs uppercase tracking-[0.16em] text-slate-500">{label as string}</p><p className="mt-2 text-sm leading-6 text-slate-200">{value as string}</p></div>)}</div></div></div><div className="rounded-[1.8rem] border border-white/10 bg-white/3 p-6"><h2 className="text-xl font-medium text-white">Reference Enterprise Architecture</h2><div className="mt-6 grid gap-3 text-center text-sm text-slate-200 sm:grid-cols-3"><div className="rounded-xl border border-white/10 bg-slate-950/50 p-4 sm:col-span-3">Customer → Sales Channel</div><div className="rounded-xl border border-sky-300/30 bg-sky-400/10 p-4 sm:col-span-3">ERP / SAP: Sales · Inventory · Billing</div><div className="rounded-xl border border-white/10 bg-slate-950/50 p-4">Warehouse</div><div className="rounded-xl border border-white/10 bg-slate-950/50 p-4">Finance</div><div className="rounded-xl border border-white/10 bg-slate-950/50 p-4">Reporting</div><div className="rounded-xl border border-emerald-300/30 bg-emerald-400/10 p-4 sm:col-span-3">Payment</div></div></div><p className="text-xs leading-5 text-slate-500">Workflow framing is based on public SAP order-to-cash learning material and is presented as a conceptual architecture, not an implementation claim.</p></div>
 }
 
+function SQLMiniProjectPage() {
+  const screenshots = [
+    { src: '/minisql/01-ask.png', title: 'Ask', description: 'Describe a request and choose Basic SQL, CTE, Joins, or Aggregation.' },
+    { src: '/minisql/02-sql.png', title: 'Review SQL', description: 'Inspect or edit the generated query before copying it into SSMS.' },
+    { src: '/minisql/03-setup.png', title: 'SQL Server setup', description: 'Configure the connection and load database schema metadata.' },
+    { src: '/minisql/00-intro.png', title: 'Floating interface', description: 'A compact welcome screen for the always-on-top desktop assistant.' },
+  ]
+
+  return (
+    <div className="space-y-12">
+      <div className="flex flex-wrap gap-3">
+        <a href="https://github.com/t3chyfr34k/MiniSQL" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-slate-950 transition hover:bg-slate-200">
+          <Github className="h-4 w-4" />View source
+        </a>
+        <a href="https://lnkd.in/p/gbSAfbq7" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white transition hover:bg-white/10">
+          <Linkedin className="h-4 w-4" />Project post
+        </a>
+      </div>
+
+      <section>
+        <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Product walkthrough</p>
+            <h2 className="mt-2 text-2xl font-medium text-white">A query workflow that stays in your hands</h2>
+          </div>
+          <a href="https://github.com/t3chyfr34k/MiniSQL/blob/main/Screenshots/usage-demo.gif" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm text-sky-200 hover:text-white">
+            Open full walkthrough <ExternalLink className="h-4 w-4" />
+          </a>
+        </div>
+        <img src="/minisql/usage-demo.gif" alt="Animated walkthrough of SQL Mini's floating interface and query workflow" className="max-h-[560px] w-full rounded-xl border border-white/10 bg-slate-950 object-contain" />
+      </section>
+
+      <section>
+        <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Screenshots</p>
+        <div className="mt-5 grid gap-6 sm:grid-cols-2">
+          {screenshots.map((screenshot) => (
+            <figure key={screenshot.src}>
+              <img src={screenshot.src} alt={`${screenshot.title} screen from SQL Mini`} loading="lazy" className="w-full rounded-xl border border-white/10 bg-slate-950" />
+              <figcaption className="mt-3">
+                <h3 className="font-medium text-white">{screenshot.title}</h3>
+                <p className="mt-1 text-sm leading-6 text-slate-300">{screenshot.description}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section className="grid gap-8 border-y border-white/10 py-8 md:grid-cols-2">
+        <div>
+          <h2 className="text-xl font-medium text-white">What it does</h2>
+          <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+            <li>Reads SQL Server catalog metadata to provide table, column, and relationship context.</li>
+            <li>Drafts T-SQL from natural-language prompts with selectable query styles.</li>
+            <li>Supports local Ollama generation, with optional Gemini and OpenAI-compatible cloud fallbacks.</li>
+            <li>Displays the query for review and provides an explicit copy action for SSMS.</li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-xl font-medium text-white">Built with</h2>
+          <p className="mt-4 text-sm leading-6 text-slate-300">Python, Tkinter, SQL Server, and ODBC. Designed for Windows 10/11 with SQL Server Management Studio.</p>
+          <div className="mt-5 flex flex-wrap gap-2 text-xs text-slate-300">
+            {['Python', 'Tkinter', 'SQL Server', 'Ollama', 'Gemini API', 'Windows'].map((technology) => <span key={technology} className="border-l border-emerald-300/60 pl-2">{technology}</span>)}
+          </div>
+        </div>
+      </section>
+
+      <div className="border-l-2 border-emerald-300/70 pl-5">
+        <h2 className="font-medium text-white">Manual execution by design</h2>
+        <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-300">SQL Mini does not execute generated queries, inject keystrokes, or paste into SSMS. Review and edit the output, then decide yourself whether to run it. Schema loading reads catalog metadata, not table rows.</p>
+      </div>
+    </div>
+  )
+}
+
 export function ProjectDetail({ slug }: ProjectDetailProps) {
-  const project = portfolioProjects.find((item) => item.slug === slug) ?? portfolioProjects[0]
-  return <main className="min-h-screen px-4 pb-24 pt-28 sm:px-6 lg:px-8"><div className="mx-auto max-w-6xl"><Header project={project} />{slug === 'it-support' && <ITSupportPage />}{slug === 'data' && <OperationsDashboard />}{slug === 'sap' && <ERPWorkflowDetailed />}<ProjectEvidence project={project.slug as 'it-support' | 'data' | 'sap'} /></div></main>
+  const project = portfolioProjects.find((item) => item.slug === slug) ?? portfolioProjects.find((item) => item.slug === 'it-support')!
+  return <main className="min-h-screen px-4 pb-24 pt-28 sm:px-6 lg:px-8"><div className="mx-auto max-w-6xl"><Header project={project} />{slug === 'sql-mini' ? <SQLMiniProjectPage /> : <>{slug === 'it-support' && <ITSupportPage />}{slug === 'data' && <OperationsDashboard />}{slug === 'sap' && <ERPWorkflowDetailed />}<ProjectEvidence project={project.slug as 'it-support' | 'data' | 'sap'} /></>}</div></main>
 }

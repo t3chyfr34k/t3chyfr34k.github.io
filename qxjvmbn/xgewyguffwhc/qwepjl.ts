@@ -1,7 +1,7 @@
 export type PortfolioProject = {
   slug: string
   title: string
-  category: 'IT Support' | 'Data' | 'SAP'
+  category: 'IT Support' | 'Data' | 'SAP' | 'AI & Desktop'
   description: string
   status: string
 }
@@ -49,6 +49,13 @@ export type WorkflowStage = {
 }
 
 export const portfolioProjects: PortfolioProject[] = [
+  {
+    slug: 'sql-mini',
+    title: 'SQL Mini — Floating SQL Assistant',
+    category: 'AI & Desktop',
+    description: 'A compact Windows assistant that reads SQL Server schema metadata and turns plain-English requests into reviewable T-SQL for manual use in SSMS.',
+    status: 'Python desktop app · GitHub project',
+  },
   {
     slug: 'it-support',
     title: 'IT Troubleshooting Knowledge Base',
