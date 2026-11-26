@@ -1,9 +1,11 @@
 import { ArrowLeft, ArrowUpRight, BookOpen, Feather } from 'lucide-react'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const amazonUrl = 'https://www.amazon.in/Other-Side-Everything-Ungalul-Oruvan-ebook/dp/B0GZG4G6Y5'
 
 export function Store() {
+  const [coverAvailable, setCoverAvailable] = useState(true)
+
   useEffect(() => {
     document.title = 'The Other Side of Everything — Shyam D'
     return () => {
@@ -57,6 +59,14 @@ export function Store() {
               <div className="relative w-[min(68vw,19rem)] [perspective:1200px] sm:w-[21rem]">
                 <div aria-hidden="true" className="absolute -inset-8 rounded-full bg-amber-200/[0.07] blur-3xl" />
                 <div className="relative aspect-[0.69] overflow-hidden rounded-r-md border border-[#f5e8d1]/20 bg-[#24221f] shadow-[18px_24px_45px_rgba(0,0,0,0.5)] [transform:rotateY(-7deg)]">
+                  {coverAvailable && (
+                    <img
+                      src="https://images-na.ssl-images-amazon.com/images/P/B0GZG4G6Y5.01._SCLZZZZZZZ_.jpg"
+                      alt="Cover of The Other Side of Everything by Shyam D"
+                      className="absolute inset-0 z-10 h-full w-full object-cover"
+                      onError={() => setCoverAvailable(false)}
+                    />
+                  )}
                   <div aria-hidden="true" className="absolute inset-y-0 left-0 w-3 bg-gradient-to-r from-black/55 via-white/10 to-transparent" />
                   <div aria-hidden="true" className="absolute inset-3 border border-amber-100/20" />
                   <div aria-hidden="true" className="absolute left-1/2 top-[22%] h-36 w-36 -translate-x-1/2 rounded-full border border-amber-100/20 sm:h-44 sm:w-44">
@@ -64,7 +74,7 @@ export function Store() {
                     <div className="absolute inset-8 rounded-full border border-amber-100/10" />
                     <div className="absolute left-1/2 top-1/2 h-px w-24 -translate-x-1/2 bg-amber-100/25" />
                   </div>
-                  <div className="absolute inset-x-8 top-[47%] text-center">
+                  <div aria-hidden={coverAvailable} className={`absolute inset-x-8 top-[47%] text-center ${coverAvailable ? 'invisible' : ''}`}>
                     <p className="font-serif text-3xl leading-[1.05] tracking-[-0.03em] text-[#f4ead9] sm:text-4xl">The Other Side<br /><span className="italic text-amber-200">of Everything</span></p>
                     <span className="mx-auto mt-6 block h-px w-10 bg-amber-200/60" />
                     <p className="mt-5 text-[10px] uppercase tracking-[0.38em] text-[#d8c4a5]">Shyam D</p>
