@@ -1,24 +1,8 @@
-import { Github, Linkedin } from 'lucide-react'
-
 export function Footer() {
-  return (
-    <footer className="border-t border-white/10 px-4 py-8 sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-sm text-slate-400 sm:flex-row">
-        <div>
-          <span className="font-medium text-slate-200">© 2026 T3chyFr34k · Lethargic Labs</span>
-        </div>
-
-        <div className="flex items-center gap-5">
-          <a href="https://github.com/t3chyfr34k" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-white">
-            <Github className="h-4 w-4" />
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-white">
-            <Linkedin className="h-4 w-4" />
-            LinkedIn
-          </a>
-        </div>
-      </div>
-    </footer>
-  )
+  const isStorePage = window.location.pathname.replace(/\/$/, '') === '/store'
+  if (isStorePage) return null
+  return <footer className="paper-footer">
+    <div className="paper-footer-columns"><div><p className="paper-kicker">THE JOURNAL</p><a href="#home">Shyam Daniel</a><p>Database · Cloud · Server administration</p></div><div><p className="paper-kicker">SECTIONS</p><a href="#about">Profile</a><a href="#skills">Technical focus</a><a href="#projects">Projects</a><a href="#labs">Lab notes</a></div><div><p className="paper-kicker">ELSEWHERE</p><a href="/store">Store</a><a href="https://github.com/t3chyfr34k" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://linkedin.com/in/t3chyfr34k" target="_blank" rel="noreferrer">LinkedIn ↗</a></div><div><p className="paper-kicker">CORRESPONDENCE</p><a href="mailto:shhyamdanielm2004@gmail.com">Email Shyam ↗</a></div></div>
+    <div className="paper-footer-rule"><span>© 2026 T3chyFr34k · Lethargic Labs</span><a href="#home">Back to top ↑</a></div>
+  </footer>
 }

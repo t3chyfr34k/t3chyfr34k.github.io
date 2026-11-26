@@ -3,19 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="T3chyFr34k — Shyam Daniel's technology portfolio across cybersecurity, IT support, data analytics, SAP, ERP, DevOps, and Figma." />
-    <meta name="keywords" content="T3chyFr34k, Shyam Daniel, Shyam Daniel M, Lethargic Labs, cybersecurity, SOC analyst, IT support, data analytics, SAP, ERP, DevOps, Figma, technology portfolio" />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link href="https://api.fontshare.com/v2/css?f[]=telma@300,400,500,700,900&display=swap" rel="stylesheet" />
+    <link href="https://api.fontshare.com/v2/css?f[]=stardom@400&display=swap" rel="stylesheet" />
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
+    <link href="https://api.fontshare.com/v2/css?f[]=author@200,300,400,500,600,700&display=swap" rel="stylesheet" />
+    <meta name="description" content="T3chyFr34k — Shyam Daniel's technology portfolio focused on database administration, cloud platforms, and server administration." />
+    <meta name="keywords" content="T3chyFr34k, Shyam Daniel, Shyam Daniel M, Lethargic Labs, database administration, DBA, cloud, AWS, server administration, SUSE Linux, SAP HANA, technology portfolio" />
     <meta name="author" content="Shyam Daniel M" />
     <meta name="application-name" content="T3chyFr34k" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#090b10" />
+    <meta name="theme-color" content="#fbfbf9" />
     <link rel="canonical" href="https://t3chyfr34k.github.io/" />
     <link rel="me" href="https://github.com/t3chyfr34k" />
     <link rel="me" href="https://linkedin.com/in/t3chyfr34k" />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%qplmnb.svg" />
     <meta property="og:type" content="profile" />
     <meta property="og:title" content="T3chyFr34k — Shyam Daniel | Lethargic Labs" />
-    <meta property="og:description" content="Cybersecurity, IT support, data analytics, SAP, ERP, DevOps, and Figma portfolio by Shyam Daniel." />
+    <meta property="og:description" content="Database administration, cloud, and server administration portfolio by Shyam Daniel." />
     <meta property="og:url" content="https://t3chyfr34k.github.io/" />
     <meta property="og:site_name" content="Lethargic Labs" />
     <meta property="og:image" content="https://t3chyfr34k.github.io/xjdhqwe.png" />
@@ -23,9 +28,24 @@
     <meta property="profile:last_name" content="Daniel" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="T3chyFr34k — Shyam Daniel | Lethargic Labs" />
-    <meta name="twitter:description" content="Technology • Security • Data • Enterprise Systems portfolio." />
+    <meta name="twitter:description" content="Database administration, cloud platforms, and server administration portfolio by Shyam Daniel." />
     <meta name="twitter:image" content="https://t3chyfr34k.github.io/xjdhqwe.png" />
     <title>T3chyFr34k — Shyam Daniel | Lethargic Labs</title>
+    <style>
+      #initial-loader{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;overflow:hidden;background:#070b07;color:#f3f5f3;opacity:1;transition:opacity 420ms ease,visibility 420ms ease}
+      #initial-loader:before{position:absolute;top:50%;left:50%;width:min(80vw,650px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(98,137,98,.23),rgba(98,137,98,.08) 38%,transparent 70%);content:"";transform:translate(-50%,-50%)}
+      #initial-loader.is-leaving{visibility:hidden;opacity:0;pointer-events:none}
+      #initial-loader .brand-loader-content{position:relative;display:flex;flex-direction:column;align-items:center;animation:brand-loader-arrive 520ms cubic-bezier(.2,.75,.25,1) both}
+      #initial-loader .brand-loader-mark{display:grid;width:142px;height:142px;place-items:center;border:1px solid rgba(158,236,155,.2);border-radius:36px;background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.025));box-shadow:0 24px 70px rgba(0,0,0,.25),inset 0 1px rgba(255,255,255,.14);backdrop-filter:blur(18px)}
+      #initial-loader svg{width:108px;height:112px;overflow:visible}#initial-loader .brand-loader-t-cap{fill:#9eec9b;transform-box:fill-box;transform-origin:center;animation:brand-cap-set 680ms cubic-bezier(.2,.8,.2,1) both}#initial-loader .brand-loader-t-stem{fill:#9eec9b;transform-box:fill-box;transform-origin:top center;animation:brand-stem-build 580ms cubic-bezier(.2,.8,.2,1) 360ms both}#initial-loader .brand-loader-t-cut{fill:#070b07}
+      #initial-loader .brand-loader-light-sweep{fill:url(#loader-sweep);opacity:0;transform:translateX(-62px);animation:brand-sweep 1.65s cubic-bezier(.22,.65,.25,1) 780ms infinite}
+      #initial-loader .brand-loader-layer{fill:rgba(158,236,155,.03);stroke:rgba(158,236,155,.28);stroke-width:1;opacity:.3;transform-box:fill-box;transform-origin:center;animation:brand-layer-ready 1.8s cubic-bezier(.2,.7,.2,1) infinite}#initial-loader .layer-one{animation-delay:850ms}#initial-loader .layer-two{animation-delay:1030ms}#initial-loader .layer-three{animation-delay:1210ms}
+      #initial-loader .brand-loader-pulse{fill:#d1ffd0;filter:drop-shadow(0 0 7px rgba(158,236,155,.8));animation:brand-pulse-travel 1.65s cubic-bezier(.24,.65,.32,1) 800ms infinite}
+      #initial-loader .brand-loader-wordmark{margin:22px 0 0;color:#f3f5f3;font:500 34px/1 'Telma','Segoe Script',cursive}#initial-loader .brand-loader-lab{margin:8px 0 0;color:#9eec9b;font:700 9px/1 'Satoshi',sans-serif;letter-spacing:.25em}
+      #initial-loader .brand-loader-status{display:flex;align-items:center;gap:8px;margin:26px 0 0;color:#aeb9ae;font:500 11px/1.4 'Satoshi',sans-serif}#initial-loader .brand-loader-status span{width:6px;height:6px;border-radius:50%;background:#9eec9b;box-shadow:0 0 12px rgba(158,236,155,.8);animation:brand-status-pulse 1s ease-in-out infinite alternate}
+      @keyframes brand-cap-set{0%{opacity:0;transform:translateY(-16px) scaleX(.72)}70%{opacity:1;transform:translateY(2px) scaleX(1.04)}100%{opacity:1;transform:translateY(0) scaleX(1)}}@keyframes brand-stem-build{0%{opacity:0;transform:scaleY(.05)}70%{opacity:1;transform:scaleY(1.08)}100%{opacity:1;transform:scaleY(1)}}@keyframes brand-sweep{0%,10%{opacity:0;transform:translateX(-62px)}18%{opacity:.8}70%{opacity:.55;transform:translateX(62px)}82%,100%{opacity:0;transform:translateX(62px)}}@keyframes brand-pulse-travel{0%,10%{opacity:0;transform:translateY(-2px) scale(.5)}20%{opacity:1;transform:translateY(0) scale(1)}78%{opacity:.9;transform:translateY(38px) scale(.8)}100%{opacity:0;transform:translateY(42px) scale(.3)}}@keyframes brand-layer-ready{0%,100%{fill:rgba(158,236,155,.02);stroke:rgba(158,236,155,.24);opacity:.2;transform:scaleX(.82)}38%,62%{fill:rgba(158,236,155,.25);stroke:#9eec9b;opacity:1;transform:scaleX(1)}}@keyframes brand-status-pulse{to{opacity:.35;transform:scale(.7)}}@keyframes brand-loader-arrive{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+      @media(prefers-reduced-motion:reduce){#initial-loader,#initial-loader *{animation:none!important;transition:none!important}}
+    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -37,7 +57,7 @@
             "url": "https://t3chyfr34k.github.io/",
             "image": "https://t3chyfr34k.github.io/xjdhqwe.png",
             "sameAs": ["https://github.com/t3chyfr34k", "https://linkedin.com/in/t3chyfr34k"],
-            "knowsAbout": ["Cybersecurity", "SOC Analysis", "IT Support", "Data Analytics", "SAP", "ERP", "DevOps", "Figma"]
+            "knowsAbout": ["Database Administration", "Cloud Computing", "AWS", "Server Administration", "Linux", "SUSE Linux", "SAP HANA"]
           },
           {
             "@type": "Organization",
@@ -58,7 +78,11 @@
     </script>
   </head>
   <body>
+    <div id="initial-loader" class="brand-loader" role="status" aria-label="Loading T3chyFr34k portfolio">
+      <div class="brand-loader-content"><div class="brand-loader-mark"><svg viewBox="0 0 100 112" fill="none" aria-hidden="true"><defs><linearGradient id="loader-sweep" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#9eec9b" stop-opacity="0"/><stop offset=".5" stop-color="#efffee" stop-opacity=".85"/><stop offset="1" stop-color="#9eec9b" stop-opacity="0"/></linearGradient></defs><path class="brand-loader-t-cap" d="M20 18H80V29H20Z"/><rect class="brand-loader-t-stem" x="46" y="29" width="8" height="38" rx="4"/><path class="brand-loader-light-sweep" d="M38 0H64L28 67H2Z"/><rect class="brand-loader-layer layer-one" x="35" y="69" width="30" height="8" rx="4"/><rect class="brand-loader-layer layer-two" x="29" y="81" width="42" height="8" rx="4"/><rect class="brand-loader-layer layer-three" x="23" y="93" width="54" height="8" rx="4"/><circle class="brand-loader-pulse" cx="50" cy="67" r="3.5"/></svg></div><p class="brand-loader-wordmark">T3chyFr34k</p><p class="brand-loader-lab">LETHARGIC LABS</p><p class="brand-loader-status"><span></span></p></div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/qxjvmbn/asdkjfh.tsx"></script>
   </body>
 </html>
+
