@@ -7,7 +7,7 @@ export function Store() {
   const [coverAvailable, setCoverAvailable] = useState(true)
 
   useEffect(() => {
-    document.title = 'The Other Side of Everything — Shyam D'
+    document.title = 'T3chyFr34k Store'
     return () => {
       document.title = 'T3chyFr34k — Shyam Daniel | Lethargic Labs'
     }
