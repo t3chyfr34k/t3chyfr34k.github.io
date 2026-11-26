@@ -14,7 +14,7 @@ export function Store() {
   return <main className="paper-store">
     <header className="paper-store-header">
       <div className="paper-edition"><span>BOOKS &amp; WRITING</span><span>AN AUTHOR’S EDITION</span></div>
-      <a className="paper-masthead" href="/store/">T3chyFr34k Store</a>
+      <a className="paper-masthead" href="/store/">Store</a>
       <p className="paper-deck">Selected work by Shyam D</p>
       <div className="paper-store-nav">THE BOOKSHOP <span>·</span> A FEATURED TITLE</div>
     </header>

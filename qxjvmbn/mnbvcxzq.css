@@ -334,8 +334,8 @@ img {
 .newspaper .paper-store { width:min(1280px,calc(100% - 64px)); }
 .newspaper .paper-store-header { position:relative; width:100%; min-height:96px; padding-top:35px; border:0; text-align:left; }
 .newspaper .paper-store-header .paper-edition { min-height:27px; }
-.newspaper .paper-store-header .paper-edition::before { position:absolute; top:39px; left:0; color:#070b07; content:'T3chyFr34k'; font:750 23px/1 Inter,'Segoe UI',Arial,sans-serif; letter-spacing:-.06em; }
-.newspaper .paper-store-header .paper-masthead { top:39px; right:auto; left:0; width:100%; height:24px; color:transparent; }
+.newspaper .paper-store-header .paper-edition::before { content:none; }
+.newspaper .paper-store-header .paper-masthead { top:39px; right:auto; left:0; width:auto; height:auto; color:var(--paper-ink); }
 .newspaper .paper-store-header .paper-edition::after { position:absolute; top:45px; right:0; color:#374937; content:'BOOKSHOP Â· FEATURED TITLE'; font-size:10px; font-weight:700; letter-spacing:.13em; }
 .newspaper .paper-store-header .paper-deck { display:none; }
 .newspaper .paper-store-nav { display:none; }
@@ -390,9 +390,9 @@ img {
   .newspaper .paper-lab-grid { grid-template-columns:1fr; }
   .newspaper .paper-footer-columns { grid-template-columns:1fr 1fr; }
   .newspaper .paper-store-header { min-height:76px; padding-top:18px; }
-  .newspaper .paper-store-header .paper-edition::before { top:23px; font-size:20px; }
+  .newspaper .paper-store-header .paper-edition::before { content:none; }
   .newspaper .paper-store-header .paper-edition::after { top:28px; font-size:8px; }
-  .newspaper .paper-store-header .paper-masthead { top:23px; height:22px; font-size:20px; }
+  .newspaper .paper-store-header .paper-masthead { top:23px; height:auto; font-size:20px; }
   .newspaper .paper-store-feature { grid-template-columns:1fr; gap:10px; padding:27px 22px; border-radius:22px; }
   .newspaper .paper-store-copy h1 { font-size:49px; }
   .newspaper .paper-book-stage { min-height:330px; }
@@ -610,7 +610,7 @@ body {
 .newspaper { font-family:'Satoshi',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif; }
 .newspaper .paper-lead h1,.newspaper .paper-section-head h2,.newspaper .paper-contact h2,.newspaper .paper-store-copy h1,.newspaper .paper-columns h3,.newspaper .paper-skill-grid h3,.newspaper .paper-project-grid h3,.newspaper .paper-lab-grid h3 { font-family:'Telma','Satoshi',ui-sans-serif,system-ui,sans-serif; font-synthesis:style weight; }
 .newspaper .paper-lead h1,.newspaper .paper-section-head h2,.newspaper .paper-contact h2,.newspaper .paper-store-copy h1 { font-weight:500; letter-spacing:-.02em; line-height:1.12; }
-.newspaper .paper-masthead,.newspaper .paper-store-header .paper-edition::before { font-family:'Telma','Satoshi',ui-sans-serif,system-ui,sans-serif; font-weight:500; letter-spacing:0; }
+.newspaper .paper-masthead { font-family:'Telma','Satoshi',ui-sans-serif,system-ui,sans-serif; font-weight:500; letter-spacing:0; }
 .newspaper .paper-summary,.newspaper .paper-section-deck,.newspaper .paper-dropcap,.newspaper .paper-store-description,.newspaper .paper-store-subtitle,.newspaper .paper-columns article > p:last-child { font-family:'Satoshi',ui-sans-serif,system-ui,sans-serif; }
 .newspaper .paper-signature,.newspaper .paper-footer-columns > div:first-child > a { font-family:'Telma','Segoe Script',cursive; font-size:1.45em; font-weight:500; font-style:normal; letter-spacing:0; }
 .newspaper .paper-lead .paper-byline { display:flex; align-items:baseline; gap:9px; }
@@ -656,7 +656,7 @@ body {
 .newspaper { --paper-ink:#151515; --paper-muted:#666; --paper-rule:#dedede; --paper-accent:#333; background:#fff!important; color:#151515!important; }
 .newspaper::before { background:radial-gradient(ellipse at 14% 24%,rgba(0,0,0,.035),transparent 30%),radial-gradient(ellipse at 86% 18%,rgba(0,0,0,.025),transparent 25%),radial-gradient(ellipse at 68% 76%,rgba(0,0,0,.03),transparent 32%); }
 .newspaper .paper-header,.newspaper .paper-store-header { background:rgba(255,255,255,.78); }
-.newspaper .paper-masthead,.newspaper .paper-store-header .paper-edition::before { color:#151515!important; }
+.newspaper .paper-masthead { color:#151515!important; }
 .newspaper .paper-nav a { color:#333; }
 .newspaper .paper-portrait img { background-color:#292929; }
 .newspaper .paper-edition a { background:#222; color:#fff; }
