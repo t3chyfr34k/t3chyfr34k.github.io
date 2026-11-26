@@ -12,6 +12,7 @@ import { ProjectDetail } from './hfdew/qwepjl'
 import { Skills } from './hfdew/qwejksd'
 import { useEffect, useState } from 'react'
 import { useScrollProgress } from './jdhfks/qpxlwe'
+import { Store } from './hfdew/store'
 
 function readProjectSlug() {
   const hash = window.location.hash
@@ -19,6 +20,7 @@ function readProjectSlug() {
 }
 
 function App() {
+  const isStorePage = window.location.pathname.replace(/\/$/, '') === '/store'
   const progress = useScrollProgress()
   const [projectSlug, setProjectSlug] = useState<string | null>(readProjectSlug)
 
@@ -67,7 +69,9 @@ function App() {
         <div className="absolute inset-0 -z-10 bg-grid bg-[length:40px_40px] opacity-40" />
 
         <Navbar />
-        {projectSlug ? (
+        {isStorePage ? (
+          <Store />
+        ) : projectSlug ? (
           <ProjectDetail slug={projectSlug} />
         ) : (
           <main>

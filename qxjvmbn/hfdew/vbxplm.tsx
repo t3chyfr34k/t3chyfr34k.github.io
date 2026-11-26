@@ -14,6 +14,7 @@ const navItems = [
 ]
 
 export function Navbar() {
+  const isStorePage = window.location.pathname.replace(/\/$/, '') === '/store'
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -37,7 +38,7 @@ export function Navbar() {
             : 'border-white/10 bg-white/3 backdrop-blur-xl',
         ].join(' ')}
       >
-        <a href="#home" className="flex items-center gap-3 text-sm font-medium tracking-[0.24em] text-slate-100 uppercase">
+        <a href={isStorePage ? '/#home' : '#home'} className="flex items-center gap-3 text-sm font-medium tracking-[0.24em] text-slate-100 uppercase">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[10px] text-emerald-200">
             IT
           </span>
@@ -46,10 +47,11 @@ export function Navbar() {
 
         <nav className="hidden items-center gap-7 text-sm text-slate-300 md:flex">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="transition hover:text-white">
+            <a key={item.href} href={isStorePage ? `/${item.href}` : item.href} className="transition hover:text-white">
               {item.label}
             </a>
           ))}
+          <a href="/store" aria-current={isStorePage ? 'page' : undefined} className="transition hover:text-white">Store</a>
         </nav>
 
         {hasResume && (
@@ -80,13 +82,14 @@ export function Navbar() {
             {navItems.map((item) => (
               <a
                 key={item.href}
-                href={item.href}
+                href={isStorePage ? `/${item.href}` : item.href}
                 className="rounded-xl px-3 py-2 transition hover:bg-white/5"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
               </a>
             ))}
+            <a href="/store" className="rounded-xl px-3 py-2 transition hover:bg-white/5" onClick={() => setIsMobileMenuOpen(false)}>Store</a>
             {hasResume && (
               <a
                 href="/resume.pdf"
