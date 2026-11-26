@@ -68,7 +68,7 @@ function App() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(141,158,194,0.14),transparent_30%),radial-gradient(circle_at_bottom_left,_rgba(52,211,153,0.08),transparent_25%)]" />
         <div className="absolute inset-0 -z-10 bg-grid bg-[length:40px_40px] opacity-40" />
 
-        <Navbar />
+        {!isStorePage && <Navbar />}
         {isStorePage ? (
           <Store />
         ) : projectSlug ? (

@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowUpRight, BookOpen, Feather } from 'lucide-react'
+import { ArrowUpRight, BookOpen, Feather } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 const amazonUrl = 'https://www.amazon.in/Other-Side-Everything-Ungalul-Oruvan-ebook/dp/B0GZG4G6Y5'
@@ -16,12 +16,7 @@ export function Store() {
   return (
     <main className="min-h-screen px-4 pb-20 pt-32 sm:px-6 sm:pt-36 lg:px-8">
       <div className="mx-auto max-w-6xl">
-        <a href="/#home" className="inline-flex items-center gap-2 text-sm text-slate-400 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-200">
-          <ArrowLeft className="h-4 w-4" />
-          Back to portfolio
-        </a>
-
-        <section aria-labelledby="store-title" className="relative mt-8 overflow-hidden rounded-[2rem] border border-white/10 bg-[#11131a]/90 px-6 py-10 shadow-[0_30px_100px_rgba(0,0,0,0.28)] sm:px-10 sm:py-14 lg:px-16 lg:py-16">
+        <section aria-labelledby="store-title" className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#11131a]/90 px-6 py-10 shadow-[0_30px_100px_rgba(0,0,0,0.28)] sm:px-10 sm:py-14 lg:px-16 lg:py-16">
           <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-28 h-96 w-96 rounded-full bg-amber-200/[0.07] blur-3xl" />
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_35%,rgba(214,171,106,0.08),transparent_45%)]" />
 
